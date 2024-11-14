@@ -1,0 +1,27 @@
+SMAP_pku:
+
+python main.py --anormly_ratio 10 --num_epochs 8  --batch_size 128  --mode monte_carlo_search --dataset SMAP_pku  --data_path dataset/SMAP_pku --input_c 25   --output_c 25   --monte_carlo 10  --no_point_adjustment;  
+
+MSL_pku:
+
+python main.py --anormly_ratio 10 --num_epochs 8  --batch_size 128  --mode monte_carlo_search --dataset MSL_pku  --data_path dataset/MSL_pku --input_c 55   --output_c 55   --monte_carlo 10  --no_point_adjustment; 
+
+
+SMD_all:
+
+python main.py --anormly_ratio 10 --num_epochs 8  --batch_size 256  --mode monte_carlo_search --dataset SMD_all  --data_path dataset/SMD_all --input_c 38   --output_c 38   --monte_carlo 10  --no_point_adjustment;  
+
+PSM:
+
+python main.py --anormly_ratio 10 --num_epochs 8  --batch_size 128  --mode monte_carlo_search --dataset PSM  --data_path dataset/PSM --input_c 25   --output_c 25   --monte_carlo 10  --no_point_adjustment;  
+
+swat:
+
+python main.py --anormly_ratio 10 --num_epochs 8  --batch_size 128  --mode monte_carlo_search --dataset SWaT  --data_path dataset/SWaT --input_c 51   --output_c 51   --monte_carlo 10  --no_point_adjustment;  
+
+WADI:
+
+python main.py --anormly_ratio 5 --num_epochs 8  --batch_size 128  --mode monte_carlo_search --dataset WADI  --data_path dataset/WADI --input_c 123   --output_c 123   --monte_carlo 10  --no_point_adjustment --k 0.1 --train_data_step 5 --kernel_length_range 0 600 --kernel_length_step 10
+
+find_best:
+python main.py --anormly_ratio 5 --num_epochs 8  --batch_size 128  --mode find_best --dataset WADI  --data_path dataset/WADI --input_c 123   --output_c 123   --monte_carlo 1  --no_point_adjustment --k 0.1 --softmax_span_range 5 8 --softmax_span_step 0.01  --kernel_length_range 270 270 --kernel_length_step 1
